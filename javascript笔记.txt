@@ -1,0 +1,153 @@
+一
+标准写法 <script type="text/javascript"></script>
+
+aler() 弹出警告框
+document.write() 直接写在页面中
+console.log() 写在控制台
+
+可以写在标签中
+<button onclick="js代码"></button>
+也可以单独写一个js文件然后引用
+<script type="text/javascript" src="xxx.js"></script>
+注意 script标签一旦引用了外部文件 就不能再编写代码了 如果要写就再写一个script
+
+二 基本语法
+1 注释方式 
+和C一样
+
+2 严格区分大小写
+（html就不区分）
+
+3 分号结尾
+如果不写分号 浏览器会自动添加 但是会消耗一些系统资源
+而且有时候浏览器会加错分号 所以在开发中分号必须写
+
+4 会忽略多个空格和换行
+
+三 字面量与变量
+定义
+字面量 不可改变的值 比如12345
+变量 用来保存字面量
+
+声明变量
+在js中使用var关键字来声明一个变量
+var a;
+var b = 1;
+
+四 标识符
+js里能自主命名的都是标识符
+跟其他语言一样
+
+五 变量类型
+JS一共有六种数据类型
+String 字符串
+Number 数值
+Boolean 布尔值
+Null 空值
+Undefined 未定
+Object 对象
+
+除了Object是 引用数据类型 其他都是 基本数据类型
+
+类型检查
+typeof
+用法
+typeof 变量
+例 console.log(typeof a);
+
+String类型
+要用引号 
+单双引号都行 不混着用就行
+引号不能嵌套 双引号里可以放单引号 单引号里可以放双引号
+
+Number类型
+包括正数浮点数
+最大值 Number.MAX_VALUE
+超过最大值的Number类型 = Infinity 小于负最大值 = -Infinity
+最小值 Number.MIN_VALUE 是 大于0的最小值
+如果无法计算（比如字符串乘字符串）返回NAN
+NAN和Infinity都是Number
+浮点数运算不精准 正数运算基本保证精准
+
+boolean类型
+和C#的bool完全一样
+
+null和undefined类型
+1 null表示空对象 
+值只有一个 是null 
+typeof返回 object
+2 undefined表示一个变量只声明未赋值 
+值只有一个 是undefined
+typeof返回 undefined
+
+类型转换
+其他类型转换为String
+1 toString() 
+例 a.toString()
+注意 null和undefined类型用该方法会报错
+2 String()
+例 String(a)
+注意 null和undefined类型不会报错
+其他类型转换为Number
+1 Number()
+    有非数字 转换为 NaN
+    空串或全是空格的字符串 转换为 0
+    布尔 转换为 0和1
+    null 转换为 数字0
+    undefined 转换为 数字NaN
+2 ParseInt() 和 ParseFlaot()
+    更加智能
+    如果对非String使用，会将其先转换为String再操作
+其他类型转换为boolean
+数字转boolean 除了NaN和0 其余都是true
+string转boolean 除了空串 其余都是true
+null和undefined 都是 false
+对象会转换为 true
+
+六 转义字符
+与其他语言一样
+
+七 进制转换
+在js中 如果表示16进制的数字 则需要以0x开头
+在js中 如果表示8进制的数字 则需要以0开头
+在js中 如果表示2进制的数字 则需要以0b开头
+
+可以在ParseInt()中传入第二个参数 来指定数字的进制
+
+八 运算符相关
+算数运算符
+String类型不能换行 要用'+'才能换行
+
+任何的值和字符串类型做加法 都会先转换为字符串 再进行拼接
+可以利用这一点进行对String类型的转换
+
+任何的值做- * / 都会转换为Number 都会先转换为字符串 再进行拼接
+可以利用这一点进行对Number类型的转换
+
+逻辑运算符
+如果对非布尔值进行取反（!）逻辑与逻辑或（&& ||）则会现将其转换为布尔值 然后再取反
+可以利用这一点进行对Boolean类型的转换
+
+关系运算符
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
